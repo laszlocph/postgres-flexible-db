@@ -7,7 +7,6 @@ provider "azurerm" {
 }
 
 provider "postgresql" {
-  alias           = "gimlet-terraform-poc-server"
   host            = var.host
   port            = 5432
   sslmode         = "require"
