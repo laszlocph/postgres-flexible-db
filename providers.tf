@@ -7,7 +7,6 @@ terraform {
     postgresql = {
       source                = "cyrilgdn/postgresql"
       version               = ">= 1.19.0"
-      configuration_aliases = [postgresql.app_7]
     }
   }
 }
