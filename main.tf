@@ -1,11 +1,3 @@
-terraform {
-  required_providers {
-    postgresql = {
-      source  = "cyrilgdn/postgresql"
-      version = ">= 1.19.0"
-    }
-  }
-}
 resource "random_password" "password" {
   length           = 24
   special          = false
@@ -14,8 +6,8 @@ resource "random_password" "password" {
 resource "azurerm_postgresql_flexible_server_database" "gimlet-azure-poc-db" {
   name      = var.database
   server_id = var.server_id
-  collation = var.collation
-  charset   = var.charset
+  collation = "en_US.utf8"
+  charset   = "utf8"
 }
 
 resource "postgresql_role" "app_user" {
@@ -31,6 +23,3 @@ resource "postgresql_grant" "read_from_emp" {
   object_type = "schema"
   privileges  = []
 }
-
-
-      

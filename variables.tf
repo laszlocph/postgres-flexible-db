@@ -1,21 +1,39 @@
+variable "server_id" {
+  type = string
+}
+
 variable "database" {
   type = string
-}
-
-variable "collation" {
-  type = string 
-  default = "en_US.utf8"
-}
-
-variable "charset" {
-  type = string
-  default = "utf8"
 }
 
 variable "user" {
   type = string
 }
 
-variable "server_id" {
+variable "tenant_id" {
+  type = string
+}
+
+variable "subscription_id" {
+  type = string
+}
+
+variable "client_id" {
+  type = string
+}
+
+variable "client_secret" {
+  type = string
+}
+
+variable "host" {
+  type = string
+}
+
+variable "username" {
+  type = string
+}
+
+variable "password" {
   type = string
 }
