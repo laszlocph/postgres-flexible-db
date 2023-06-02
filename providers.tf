@@ -1,16 +1,3 @@
-terraform {
-  required_providers {
-    azurerm = {
-      source  = "hashicorp/azurerm"
-      version = ">= 3.56.0"
-    }
-    postgresql = {
-      source                = "cyrilgdn/postgresql"
-      version               = ">= 1.19.0"
-    }
-  }
-}
-
 provider "azurerm" {
   features {}
   tenant_id       = var.tenant_id
